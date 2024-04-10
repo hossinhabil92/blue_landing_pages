@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="https://savana.life/slotsgun/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="icon"
+      href="https://savana.life/slotsgun/assets/ace.png"
+      type="image/ico"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script>
+      const getQueryParam = (name) => {
+        const url = new URL(window.location.href);
+        const searchParams = new URLSearchParams(url.search);
+        const param = searchParams.get(name);
+        if (param !== null) {
+          return param;
+        }
+        return false;
+      };
+
+      const data = getQueryParam("data");
+      const decodedQueryString = decodeURIComponent(data);
+      const dataObject = JSON.parse(decodedQueryString);
+      const { aff_sub17, aff_sub18, auto_login } = dataObject;
+
+      if (aff_sub17 && aff_sub18 && auto_login) {
+        var script = document.createElement("script");
+        script.src = `https://www.googletagmanager.com/gtag/js?id=AW-${aff_sub17}`;
+        script.async = true;
+        document.head.appendChild(script);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", `AW-${aff_sub17}`);
+        window.gtag("event", "conversion", {
+          send_to: `AW-${aff_sub17}/${aff_sub18}`,
+        });
+        setTimeout(function () {
+          window.location.href = auto_login;
+        }, 2000);
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <section class="header_section" id="home">
+      <!-- Start Navbar -->
+      <nav>
+        <div class="nav_container">
+          <div class="nav__logo">
+            <a href="#"
+              ><img
+                src="https://savana.life/slotsgun/assets/logo.png"
+                alt="logo"
+            /></a>
+          </div>
+          <ul class="nav__links">
+            <li class="link scroll"><a href="#home">Home</a></li>
+            <li class="link scroll">
+              <a href="#recommendation">Recommendations</a>
+            </li>
+            <li class="link scroll"><a href="#experience">About</a></li>
+            <li class="link scroll"><a href="#services">Offer</a></li>
+            <li class="link scroll">
+              <a href="#testimonial">Testimonials</a>
+            </li>
+            <li class="link scroll"><a href="#contact_us">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+
+      <!-- Start Hero Section -->
+      <div class="header__content">
+        <!-- Left Side -->
+        <div class="header__left_side">
+          <img
+            src="https://savana.life/slotsgun/assets/logo.png"
+            alt="Logo"
+            class="header_logo"
+          />
+          <h2>
+            Discover your upcoming destination at a luxurious casino hotel
+            resort.
+          </h2>
+          <p>
+            Welcome to <span class="domain_name"></span> where luxury merges
+            with leisure and prizes await. Immerse yourself in a realm of thrill
+            and tranquility at our prestigious casino hotels. From the vibrant
+            allure of Las Vegas, USA, to the enchantment of the United Kingdom,
+            Austria, and beyond, we present top-tier destinations for your next
+            unforgettable escape. Don't delay—embark on your adventure today,
+            reserve your spot now!
+          </p>
+          <div class="btn_container">
+            <button class="btn_1 btn" id="explore_btn">
+              <img
+                src="https://savana.life/slotsgun/assets/trebol.png"
+                alt="trebol"
+                class="btn_icon"
+              />
+              EXPLORE
+            </button>
+            <button class="btn_2 btn" id="contact_btn">
+              <img
+                src="https://savana.life/slotsgun/assets/heart.png"
+                alt="heart"
+                class="btn_icon"
+              />
+              CONTACT
+            </button>
+          </div>
+        </div>
+        <div class="header__right_side">
+          <div class="content">
+            <div class="text_content">
+              <h2>South Point Hotel, Casino, and Spa</h2>
+            </div>
+            <div class="header_stars">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+            </div>
+            <div class="text_content_2">
+              <p>
+                Amenities such as a casino, bowling alley and poolside bar await
+                you at South Point Hotel, Casino, and Spa. If you love gambling,
+                this resort has 2390 slots, 60 casino gaming tables and a sports
+                betting house. Pamper yourself with Swedish massages,
+                hydrotherapy or body treatments at the on-site spa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Hero Section -->
+    </section>
+
+    <!-- Recommendation Section -->
+    <section class="recommendation_section" id="recommendation">
+      <div class="content">
+        <img
+          src="https://savana.life/slotsgun/assets/heart.png"
+          alt="heart"
+          class="recommendation_heart_img"
+        />
+        <h2>Our <span>Recommendation</span></h2>
+      </div>
+      <div #swiperRef="" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide card">
+            <img
+              src="https://savana.life/slotsgun/assets/recommendation/1.jpg"
+              alt="img_1"
+            />
+            <div class="content">
+              <h2>HARD ROCK HOTEL & CASINO</h2>
+              <span class="red_line"></span>
+              <p>
+                Situated near the renowned Strip and Las Vegas' premium outlet
+                stores, the Hard Rock Hotel & Casino Las Vegas provides a
+                distinctive experience featuring a lively casino, renowned
+                nightclub, and poolside bars.
+              </p>
+              <div class="starts_container">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+              <div class="btn_container">
+                <a
+                  href="https://expedia.com/affiliates/atlantic-city-hotels-hard-rock-hotel-casino-atlantic-city.nXWs41y"
+                  target="_blank"
+                  ><button>Book Now</button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide card">
+            <img
+              src="https://savana.life/slotsgun/assets/recommendation/2.jpeg"
+              alt="img_2"
+            />
+            <div class="content">
+              <h2>Westgate Las Vegas Resort & Casino</h2>
+              <span></span>
+              <p>
+                Adjacent to the Las Vegas Festival Grounds and Sphere, Westgate
+                Las Vegas Resort & Casino offers an array of amenities,
+                including 18 holes of golf, a casino, and a poolside bar. This
+                hotel promises excitement with features like a sportsbook, 25
+                gaming tables, and 300 slot machines, ensuring an unforgettable
+                stay.
+              </p>
+              <div class="starts_container">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+              <div class="btn_container">
+                <a
+                  href="https://expedia.com/affiliates/las-vegas-hotels-westgate-las-vegas-resort-casino.zZaUp9A"
+                  target="_blank"
+                  ><button>Book Now</button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide card">
+            <img
+              src="https://savana.life/slotsgun/assets/recommendation/3.png"
+              alt="img_3"
+            />
+            <div class="content">
+              <h2>ARIA Resort & Casino</h2>
+              <span></span>
+              <p>
+                Situated close to Dolby Live Amphitheater and The Cosmopolitan
+                Casino, ARIA Resort & Casino boasts a dynamic blend of
+                entertainment options including a casino, nightclub, and
+                poolside bar. For avid gamers, the resort features two VIP
+                casino rooms, 100 game tables, and 1600 slots, ensuring an
+                exhilarating gaming experience.
+              </p>
+              <div class="starts_container">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+              <div class="btn_container">
+                <a
+                  href="https://expedia.com/affiliates/las-vegas-hotels-aria-resort-casino.d9IfmgB"
+                  target="_blank"
+                  ><button>Book Now</button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide card">
+            <img
+              src="https://savana.life/slotsgun/assets/recommendation/5.png"
+              alt="img_5"
+            />
+            <div class="content">
+              <h2>Beau Rivage</h2>
+              <span></span>
+              <p>
+                Nearby Cathedral of the Nativity of the Blessed Virgin Mary and
+                Hard Rock Casino Biloxi, Beau Rivage offers a range of amenities
+                including a casino, poolside bar, and coffee shop/cafe.
+                Experience the thrill with features like 20 gaming tables, a VIP
+                casino room, and 1000 slot machines, promising an exciting stay
+                at this resort.
+              </p>
+              <div class="starts_container">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+              <div class="btn_container">
+                <a
+                  href="https://expedia.com/affiliates/biloxi-hotels-beau-rivage.EX5HcFj"
+                  target="_blank"
+                  ><button>Book Now</button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide card">
+            <img
+              src="https://savana.life/slotsgun/assets/recommendation/6.png"
+              alt="img_6"
+            />
+            <div class="content">
+              <h2>The Ritz London</h2>
+              <span></span>
+              <p>
+                Located in close proximity to Buckingham Palace and Big Ben, The
+                Ritz London provides convenient on-site amenities including
+                shopping, dry cleaning/laundry services, and car rentals.
+                Experience culinary delights at The Palm Court café, while
+                enjoying complimentary in-room Wi-Fi, along with access to a bar
+                and fitness center.
+              </p>
+              <div class="starts_container">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+              <div class="btn_container">
+                <a
+                  href="https://expedia.com/affiliates/london-hotels-the-ritz-london.Lp8GJ9q"
+                  target="_blank"
+                  ><button>Book Now</button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide card">
+            <img
+              src="https://savana.life/slotsgun/assets/recommendation/7.jpeg"
+              alt="img_7"
+            />
+            <div class="content">
+              <h2>Great Victoria Hotel</h2>
+              <span></span>
+              <p>
+                At Great Victoria Hotel, anticipate amenities such as a library,
+                dry cleaning/laundry services, and a bar. Indulge in local
+                cuisine at the onsite Corniche Restaurant. Complimentary in-room
+                WiFi, a gym, and a conference center are also provided for
+                guests' convenience.
+              </p>
+              <div class="starts_container">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+              <div class="btn_container">
+                <a
+                  href="https://expedia.com/affiliates/bradford-hoteles-great-victoria-hotel.fMWq70m"
+                  target="_blank"
+                  ><button>Book Now</button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide card">
+            <img
+              src="https://savana.life/slotsgun/assets/recommendation/8.png"
+              alt="img_8"
+            />
+            <div class="content">
+              <h2>Best Western Palace Hotel & Casino</h2>
+              <span></span>
+              <p>
+                Enjoy the excellent amenities available at Best Western Palace
+                Hotel & Casino, including a casino, laundry or dry cleaning
+                service, and a bar. Pamper yourself with a visit to the onsite
+                spa for relaxation and wellness. Indulge in ocean views and more
+                at the property's two restaurants.
+              </p>
+              <div class="starts_container">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+              <div class="btn_container">
+                <a
+                  href="https://expedia.com/affiliates/douglas-hoteles-best-western-palace-hotel-casino.I4KF6nA"
+                  target="_blank"
+                  ><button>Book Now</button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide card">
+            <img
+              src="https://savana.life/slotsgun/assets/recommendation/9.png"
+              alt="img_10"
+            />
+            <div class="content">
+              <h2>The Sefton</h2>
+              <span></span>
+              <p>
+                The Sefton offers a range of amenities including a library,
+                laundry and dry cleaning services, and a bar. Indulge in spa
+                treatments such as manicures, pedicures, aromatherapy, or
+                facials. Experience Asian cuisine with ocean views and brunch at
+                the onsite restaurant, Bonzai.
+              </p>
+              <div class="starts_container">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+              <div class="btn_container">
+                <a
+                  href="https://expedia.com/affiliates/douglas-hoteles-the-sefton.fJY7kW7"
+                  target="_blank"
+                  ><button>Book Now</button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide card">
+            <img
+              src="https://savana.life/slotsgun/assets/recommendation/10.jpeg"
+              alt="img_10"
+            />
+            <div class="content">
+              <h2>Halvard Hotel</h2>
+              <span></span>
+              <p>
+                At Halvard Hotel, enjoy a full breakfast, laundry facilities,
+                and access to a business center. Complimentary in-room Wi-Fi is
+                provided, along with a restaurant and a snack bar or deli for
+                your convenience.
+              </p>
+              <div class="starts_container">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+              <div class="btn_container">
+                <a
+                  href="https://expedia.com/affiliates/douglas-hoteles-halvard-hotel.M0ob3OE"
+                  target="_blank"
+                  ><button>Book Now</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Casino Expereience Section -->
+    <section class="experience_section" id="experience">
+      <div class="content">
+        <img
+          src="https://savana.life/slotsgun/assets/services/diamond.png"
+          alt="diamond"
+          class="recommendation_heart_img"
+        />
+        <h2>
+          <span>WELCOME TO</span>
+          <span class="domain_name domain_name_2"></span> CASINO EXPERIENCES
+        </h2>
+      </div>
+      <div class="main_container">
+        <div class="container">
+          <div class="inner_container">
+            <div class="content_container">
+              <h2>Casino Hotels in Las Vegas</h2>
+              <p>
+                Discover the vibrant heart of Las Vegas entertainment through
+                our premier casino hotels. Immerse yourself in non-stop gaming,
+                exquisite dining, and world-class entertainment along the iconic
+                Strip. From the mesmerizing fountain show at the Bellagio to the
+                opulent setting of the Venetian, each hotel promises an
+                unforgettable vacation experience. Embark on an extraordinary
+                getaway and indulge in the excitement of Las Vegas like never
+                before.
+              </p>
+              <button class="btn" id="more_btn">
+                <img
+                  src="https://savana.life/slotsgun/assets/ace.png"
+                  alt="ace"
+                  class="btn_icon"
+                />
+                More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brik And Morta Casino -->
+    <section class="brik_morta_section" id="brik_morta">
+      <div class="header">
+        <img
+          src="https://savana.life/slotsgun/assets/trebol.png"
+          alt="trebol"
+        />
+        <div class="header_content">
+          <h2>Brick-and-Mortar Casino Hotels</h2>
+          <p>The real experience</p>
+        </div>
+        <img src="https://savana.life/slotsgun/assets/heart.png" alt="heart" />
+      </div>
+      <div class="cards_container">
+        <div class="card">
+          <img
+            src="https://savana.life/slotsgun/assets/brike_morta/poker.png"
+            alt="poker"
+          />
+          <p>poker</p>
+        </div>
+        <div class="card">
+          <img
+            src="https://savana.life/slotsgun/assets/brike_morta/slots.png"
+            alt="slot"
+          />
+          <p>slots</p>
+        </div>
+        <div class="card">
+          <img
+            src="https://savana.life/slotsgun/assets/brike_morta/roulette.png"
+            alt="roulette"
+          />
+          <p>roulette</p>
+        </div>
+        <div class="card">
+          <img
+            src="https://savana.life/slotsgun/assets/brike_morta/blackjack.png"
+            alt="blackjack"
+          />
+          <p>blackjack</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services_section" id="services">
+      <div class="container">
+        <div class="left_side">
+          <div class="header_content">
+            <p>EXPLORE OUR SERVICES</p>
+            <h2>CORE SERVICES</h2>
+          </div>
+          <div class="list_container">
+            <div class="card">
+              <img
+                src="https://savana.life/slotsgun/assets/services/car.png"
+                alt="car"
+              />
+              <div class="card_content">
+                <p>Airport Transportation Service</p>
+                <span
+                  >Seamless Airport Transfer Service for Hassle-Free
+                  Arrivals</span
+                >
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="https://savana.life/slotsgun/assets/services/maid.png"
+                alt="maid"
+              />
+              <div class="card_content">
+                <p>Housekeeping Services</p>
+                <span
+                  >Enjoy Professional Housekeeping Services for Immaculate
+                  Accommodations</span
+                >
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="https://savana.life/slotsgun/assets/services/wifi.png"
+                alt="wifi"
+              />
+              <div class="card_content">
+                <p>Wifi & Internet</p>
+                <span>Stay Connected with High-Speed Internet Access</span>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="https://savana.life/slotsgun/assets/services/shirt.png"
+                alt="shirt"
+              />
+              <div class="card_content">
+                <p>Laundry Facilities</p>
+                <span>Effortless Laundry Services for a Stress-Free Stay</span>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="https://savana.life/slotsgun/assets/services/breakfast.png"
+                alt="shirt"
+              />
+              <div class="card_content">
+                <p>In-Room Breakfast Service</p>
+                <span>
+                  Kickstart Your Day with Delectable Breakfast Delivered</span
+                >
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="https://savana.life/slotsgun/assets/services/pool.png"
+                alt="shirt"
+              />
+              <div class="card_content">
+                <p>Pool Facilities</p>
+                <span
+                  >Indulge in Relaxation with Our Refreshing Swimming Pool
+                  Amenities</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right_side">
+          <img
+            src="https://savana.life/slotsgun/assets/services/right_img.jpg"
+            alt="right_img"
+            class="right_img"
+          />
+          <img
+            src="https://savana.life/slotsgun/assets/ace.png"
+            alt="ace"
+            class="ace_img"
+          />
+          <img
+            src="https://savana.life/slotsgun/assets/services/diamond.png"
+            alt="ace"
+            class="diamond_img"
+          />
+        </div>
+      </div>
+      <button class="btn" id="see_more_btn">
+        <img
+          src="https://savana.life/slotsgun/assets/trebol.png"
+          alt="rebol"
+          class="btn_icon"
+        />
+        SEE MORE
+      </button>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact_section">
+      <div class="container">
+        <div class="left_side">
+          <h2>Experience Unmatched Comfort Every Day of the Year</h2>
+          <p>Secure the Ultimate Choice</p>
+          <div class="btn_container">
+            <button class="btn" id="contact_btn_2">
+              <img
+                src="https://savana.life/slotsgun/assets/heart.png"
+                alt="heart"
+                class="btn_icon"
+              />
+              CONTACT US
+            </button>
+          </div>
+        </div>
+        <div class="right_side">
+          <img
+            src="https://savana.life/slotsgun/assets/contact/lady_img.jpg"
+            alt="lady_img"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- benefits -->
+    <section class="benefits_section" id="benefits">
+      <div class="container">
+        <div class="left_side">
+          <span class="red_line"></span>
+          <p class="top_p">Our Advantages</p>
+          <h2 class="top_h">What Sets Our Hotels Apart?</h2>
+
+          <div class="list_container">
+            <div class="card">
+              <div class="img_box">
+                <img
+                  src="https://savana.life/slotsgun/assets/benefits/shield.png"
+                  alt="shield"
+                />
+              </div>
+              <div class="content">
+                <h2>A Trusted Choice for Thousands</h2>
+                <p>
+                  Join the community of thousands of satisfied customers who
+                  have entrusted us to provide quality, service, and peace of
+                  mind with every experience. Our reputation precedes us,
+                  reflecting our commitment to excellence and ensuring your
+                  complete satisfaction.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="img_box">
+                <img
+                  src="https://savana.life/slotsgun/assets/benefits/low.png"
+                  alt="low"
+                />
+              </div>
+              <div class="content">
+                <h2>Affordable Room Options</h2>
+                <p>
+                  Explore our range of lodging options offering competitive
+                  rates without compromising on comfort and service. Experience
+                  an affordable stay where excellence is always guaranteed.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="img_box">
+                <img
+                  src="https://savana.life/slotsgun/assets/benefits/customer.png"
+                  alt="customer"
+                />
+              </div>
+              <div class="content">
+                <h2>Exceptional Customer Service Experience</h2>
+                <p>
+                  Our dedicated team is committed to providing personalized
+                  attention to ensure your stay is flawless. Whether you seek
+                  local recommendations, assistance with additional
+                  reservations, or any other inquiries, we are available around
+                  the clock to assist you every step of the way. Your comfort
+                  and satisfaction are our top priorities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right_side">
+          <div class="right_img_box">
+            <img
+              src="https://savana.life/slotsgun/assets/benefits/right_side_img.jpg"
+              alt="img"
+            />
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials_section" id="testimonial">
+      <div class="container">
+        <div class="header">
+          <img
+            src="https://savana.life/slotsgun/assets/trebol.png"
+            alt="trebol"
+          />
+          <div class="header_content">
+            <h2>Our Testimonials</h2>
+          </div>
+          <img
+            src="https://savana.life/slotsgun/assets/heart.png"
+            alt="heart"
+          />
+        </div>
+        <swiper-container
+          class="testimonialSwiper"
+          pagination="true"
+          effect="coverflow"
+          grab-cursor="true"
+          centered-slides="true"
+          slides-per-view="auto"
+          coverflow-effect-rotate="50"
+          coverflow-effect-stretch="0"
+          coverflow-effect-depth="100"
+          coverflow-effect-modifier="1"
+          coverflow-effect-slide-shadows="true"
+        >
+          <swiper-slide class="swiper_slide">
+            <div class="content">
+              <div class="rounded-image">
+                <img
+                  src="https://savana.life/slotsgun/assets/testimonial/1.jpg"
+                />
+              </div>
+              <p>
+                <span class="domain_name"></span> Casino Experiences provided an
+                unforgettable trip! Winning big while lounging by the canals in
+                the Netherlands was a dream come true. The combination of luxury
+                accommodations and thrilling gaming made for an epic vacation.
+              </p>
+            </div>
+          </swiper-slide>
+          <swiper-slide class="swiper_slide">
+            <div class="content">
+              <div class="rounded-image">
+                <img
+                  src="https://savana.life/slotsgun/assets/testimonial/2.jpg"
+                />
+              </div>
+              <p>
+                Just had an unforgettable trip at
+                <span class="domain_name"></span> Casino! Winning big by the
+                canals in the Netherlands was a dream come true. Luxury
+                accommodations and thrilling gaming made for an epic vacation!
+              </p>
+            </div>
+          </swiper-slide>
+          <swiper-slide class="swiper_slide">
+            <div class="content">
+              <div class="rounded-image">
+                <img
+                  src="https://savana.life/slotsgun/assets/testimonial/3.jpg"
+                />
+              </div>
+              <p>
+                Absolutely blown away by my experience at
+                <span class="domain_name"></span> Casino! From scoring big wins
+                by the canals in the Netherlands to indulging in luxury
+                accommodations and thrilling gaming, every moment was
+                unforgettable. <span class="domain_name"></span> Casino truly
+                delivered an epic vacation!
+              </p>
+            </div>
+          </swiper-slide>
+          <swiper-slide class="swiper_slide">
+            <div class="content">
+              <div class="rounded-image">
+                <img
+                  src="https://savana.life/slotsgun/assets/testimonial/4.jpg"
+                />
+              </div>
+              <p>
+                Thrilled to share my amazing experience at
+                <span class="domain_name"></span> Casino! From hitting big wins
+                by the stunning canals in the Netherlands to enjoying top-notch
+                accommodations and exhilarating gaming, every moment was nothing
+                short of extraordinary. <span class="domain_name"></span> Casino
+                definitely knows how to create unforgettable vacations!
+              </p>
+            </div>
+          </swiper-slide>
+          <swiper-slide class="swiper_slide">
+            <div class="content">
+              <div class="rounded-image">
+                <img
+                  src="https://savana.life/slotsgun/assets/testimonial/3.jpg"
+                />
+              </div>
+              <p>
+                Delighted to rave about my incredible time at
+                <span class="domain_name"></span> Casino! Whether it was scoring
+                impressive wins by the picturesque canals in the Netherlands or
+                relishing in the luxurious accommodations and thrilling gaming
+                options, my experience was absolutely unforgettable.
+                <span class="domain_name"></span> Casino exceeded all
+                expectations for an epic getaway!
+              </p>
+            </div>
+          </swiper-slide>
+        </swiper-container>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contactus_section" id="contact_us">
+      <div class="container">
+        <div class="left_side">
+          <img
+            src="https://savana.life/slotsgun/assets/trebol.png"
+            alt="trebol"
+          />
+          <span class="red_line"></span>
+          <h2>contact</h2>
+          <form class="form">
+            <div class="input_box">
+              <p>Name</p>
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                placeholder="Example: Jhon"
+                required
+              />
+              <span id="firstNameCheck" style="color: red"
+                >Name is missing</span
+              >
+            </div>
+            <div class="input_box">
+              <p>Last name</p>
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                placeholder="Example: Anderson"
+                required
+              />
+              <span id="lastNameCheck" style="color: red"
+                >LastName is missing</span
+              >
+            </div>
+            <div class="input_box">
+              <p>E-mail</p>
+              <input
+                type="email"
+                placeholder="Example: jhon.anderson@example.com"
+                name="email"
+                id="email"
+                required
+              />
+              <span id="emailvalid" style="color: red">Email is invalid</span>
+            </div>
+            <div class="input_box">
+              <p>Phone number</p>
+              <div class="phone_box">
+                <div class="phone_container">
+                  <div class="red_box"></div>
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    placeholder="Example: 555-1234"
+                    required
+                  />
+                </div>
+                <span id="phoneCheck" style="color: red"
+                  >PhoneNumber is invalid</span
+                >
+              </div>
+            </div>
+            <button class="submit_button">Send</button>
+          </form>
+          <div class="confirm_popup" id="popup-5">
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="close-btn">&times;</div>
+              <div class="content-container">
+                <h1>Confirm Registration</h1>
+                <p>
+                  Thank you <span class="register_name"></span> For Your
+                  Registration
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right_side">
+          <div class="content">
+            <span>Find Your Best</span>
+            <p>Casino Hotel!</p>
+          </div>
+          <img
+            src="https://savana.life/slotsgun/assets/contactus/right_side_img.jpg"
+            alt="img"
+          />
+          <span class="red_line"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer_section">
+      <div class="main_container">
+        <div class="container">
+          <div class="header_footer">
+            <img
+              src="https://savana.life/slotsgun/assets/logo.png"
+              alt="logo"
+            />
+            <span></span>
+          </div>
+          <div class="footer_links">
+            <ul class="nav__links">
+              <li class="link scroll"><a href="#home">Home</a></li>
+              <li class="link scroll">
+                <a href="#recommendation">Recommendations</a>
+              </li>
+              <li class="link scroll"><a href="#experience">About</a></li>
+              <li class="link scroll"><a href="#services">Offer</a></li>
+              <li class="link scroll">
+                <a href="#testimonial">Testimonials</a>
+              </li>
+              <li class="link scroll"><a href="#contact_us">Contact</a></li>
+            </ul>
+            <ul>
+              <li><a class="terms-btn">TERMS & CONDITIONS</a></li>
+              <li><a class="privacy-btn">Privacy Policy</a></li>
+              <li><a class="cookies-btn">COOKIES</a></li>
+            </ul>
+            <p>
+              | Certain hotels featured on our site may be advertisements or
+              sponsorships. Our aim is to deliver impartial and unbiased hotel
+              reviews to our readers. When you book a hotel through links on our
+              site, we may earn a commission, at no additional cost to you. |
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Privacy Popup -->
+      <div class="popup" id="popup-2">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn">&times;</div>
+          <div class="content-container">
+            <h1>Privacy Notice</h1>
+            <p>
+              This Privacy Notice applies to
+              <span class="domain_name"></span> and all of its affiliates and
+              related companies (we, us, our or us). At
+              <span class="domain_name"></span>, we are committed to protecting
+              the privacy of the personal information you provide to us through
+              our website and other electronic means. This notice describes how
+              we collect, use and share your personal information and your
+              rights regarding this information.
+            </p>
+            <h1>Information We Collect</h1>
+            <p>We may collect the following personal information:</p>
+            <li>
+              Contact Information: This may include your name, email address,
+              mailing address, phone number, and other contact information.
+            </li>
+            <li>
+              Browsing Information: We collect information about how you use our
+              website, including your IP address, web browser, operating system,
+              pages visited, date and time of visit and other similar data.
+            </li>
+            <h1>Use of Information.</h1>
+            <p>
+              We use the personal information collected for the following
+              purposes:
+            </p>
+            <li>
+              To provide you with the products or services you have requested.
+            </li>
+            <li>To enhance and personalize your experience on our website.</li>
+            <li>
+              To send you communications regarding our products, services or
+              promotions, provided that you have given your consent to do so.
+            </li>
+            <li>To comply with our legal and regulatory obligations.</li>
+            <h1>Information Sharing</h1>
+            <p>
+              We do not sell, rent or share your personal information with third
+              parties for their marketing purposes without your express consent.
+              We may share your personal information with:
+            </p>
+            <li>
+              Service providers that help us deliver our products and services,
+              such as payment processors and shipping service providers.
+            </li>
+            <li>
+              Governmental authorities or other parties in compliance with the
+              law, where necessary to comply with legal requirements or legal
+              process.
+            </li>
+            <h1>Your Rights</h1>
+            <p>
+              You have certain rights in relation to your personal information,
+              including the right to access, correct, delete and object to the
+              processing of your personal information. To exercise these rights
+              or to ask questions about how we handle your personal information,
+              please contact us using the contact information provided below.
+            </p>
+            <h1>Changes to this Privacy Notice</h1>
+            <p>
+              We reserve the right to update this Privacy Notice at any time to
+              reflect changes in our information handling practices. We
+              encourage you to periodically review this notice to stay informed
+              about how we are protecting your information.
+            </p>
+            <p>
+              Contact: If you have any questions or concerns about this Privacy
+              Notice or how we handle your personal information, you may contact
+              us as follows:
+            </p>
+            <p><span class="domain_name"></span></p>
+            <p>+1 403 8525 5243</p>
+            <p>info@rapwr.com</p>
+            <p>Last updating: 06/11/2023</p>
+          </div>
+        </div>
+      </div>
+      <!-- Terms Popup -->
+      <div class="popup" id="popup-3">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn">&times;</div>
+          <div class="content-container">
+            <h1>Introduction</h1>
+            <p>
+              These terms and conditions govern the use of
+              <span class="domain_name"></span>. By accessing this website, you
+              agree to these terms and conditions in full. If you do not agree
+              with these terms and conditions or any part of these, you are
+              requested not to use this <span class="domain_name"></span>.
+            </p>
+            <h1>Acceptable Use</h1>
+            <p>
+              The use of this website is not permitted in a way that may cause
+              damage to the website or its accessibility, or in any way that is
+              illegal, fraudulent, or harmful.
+            </p>
+            <h1>Intellectual Property</h1>
+            <p>
+              The content of this website, including but not limited to text,
+              graphics, logos, images, and multimedia material, is protected by
+              copyright and other intellectual property laws. These materials
+              may not be reproduced, distributed, transmitted, or used in any
+              way without the prior written permission of the content owner.
+            </p>
+            <h1>Third-Party Links</h1>
+            <p>
+              This website may contain links to other websites that are not
+              under our control. We have no control over the nature, content,
+              and availability of those sites. The inclusion of any link does
+              not necessarily imply a recommendation or endorsement of the views
+              expressed on those sites.
+            </p>
+            <h1>Modifications to the Terms and Conditions</h1>
+            <p>
+              We reserve the right to modify these terms and conditions at any
+              time without prior notice. It is your responsibility to
+              periodically review these terms and conditions to stay informed
+              about updates.
+            </p>
+            <h1>Cookies</h1>
+            <p>
+              We use cookies. By accessing <span class="domain_name"></span>,
+              you agree to the use of cookies in accordance with the Privacy
+              Policy of <span class="domain_name"></span>.
+            </p>
+            <h1>Applicable Law</h1>
+            <p>
+              These terms and conditions are governed by the laws of Canada, and
+              any dispute related to these terms and conditions will be subject
+              to the exclusive jurisdiction of the courts of the same.
+            </p>
+            <h1>Contact</h1>
+            <p>
+              If you have any questions about these terms and conditions, please
+              contact us through
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Cookies -->
+      <div class="popup" id="popup-4">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn">&times;</div>
+          <div class="content-container">
+            <h1>Cookies Policy</h1>
+            <p>
+              Here at <span class="domain_name"></span>, henceforth referred to
+              as the Operator, we uphold the Users' right to decide on the
+              sharing of their information. We want to inform you that we
+              utilize cookie technology and geolocation on our Website.
+            </p>
+            <p>
+              Cookies are small pieces of text data sent by a web server and
+              stored on the User's device. By default, cookies are designed to
+              be read only by the server that created them.
+            </p>
+            <h1>These cookies serve several purposes:</h1>
+            <p>
+              Facilitating the User's Website experience through session
+              maintenance (after logging in), eliminating the need for the User
+              to re-enter login credentials on each page. Customizing Website
+              content to align with User preferences and optimizing Website
+              usage. These files allow recognition of the User's device and
+              ensure proper display of the Website tailored to individual needs.
+            </p>
+            <p>
+              Gathering anonymous aggregate statistical data to enhance
+              understanding of User behavior on the Website, thereby improving
+              the Website's structure and content in line with User
+              expectations. Our Website employs two primary types of cookies:
+              session cookies and persistent cookies. Session cookies are
+              temporary files stored on the User's device until they log out,
+              leave the Website, or close their web browser. Persistent cookies
+              remain on the User's device for a specified period or until the
+              User deletes them.
+            </p>
+            <p>
+              Additionally, <span class="domain_name"></span> utilizes
+              mechanisms from external entities, partners, and advertisers,
+              including social functions from Facebook and Google. This may
+              involve cookies from these entities being stored on the User's
+              device.
+            </p>
+            <p>
+              Users have the ability to manage cookie settings in their web
+              browser. By default, browsers allow cookie storage on devices, but
+              Users can modify settings or delete cookies at any time. For
+              geolocation services, User consent is obtained through browser
+              settings acceptance.
+            </p>
+            <p>
+              It's important to note that restricting cookie usage may impact
+              certain functionalities on the Website or prevent their full
+              utilization.
+            </p>
+            <p>
+              Furthermore, it's essential to emphasize that cookies never
+              contain Users' personal data. Information stored in cookies or
+              access to them does not alter the configuration of the User's
+              device or installed software.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://savana.life/slotsgun/jquary-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://savana.life/slotsgun/swiper.js"></script>
+    <script src="https://savana.life/slotsgun/main.js"></script>
+  </body>
+</html>
